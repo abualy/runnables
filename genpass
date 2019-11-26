@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+if [ $# -eq 0 ]
+  then
+    length=16
+  else
+    length=$1
+fi
+< /dev/urandom tr -dc A-Za-z0-9-_*% | head -c${1:-${length}};echo;
+
